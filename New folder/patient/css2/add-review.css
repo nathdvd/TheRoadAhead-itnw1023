@@ -1,0 +1,527 @@
+/* google font link  */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+/* font awesome cdn link  */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+
+:root{
+   --main-color:#16a085;
+   --red:#eb4d4b;
+   --orange:#f39c12;
+   --light-color:#999;
+   --light-bg:#eee;
+   --white:#fff;
+   --border:.1rem solid rgba(0,0,0,.2);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+body{
+   background-color: var(--light-bg);
+   padding-bottom: 8rem;
+}
+
+section{
+   max-width: 1200px;
+   padding: 2rem;
+   width: 50%;
+}
+
+.one-heading{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-bottom: 2rem;
+   margin-bottom: 2.5rem;
+   gap: 1.5rem;
+   flex-wrap: wrap;
+   border-bottom: var(--border);
+}
+
+.one-heading h1{
+   font-size: 2.5rem;
+   color: var(--black);
+   text-transform: capitalize;
+}
+
+.empty{
+   background-color: var(--white);
+   border-radius: .5rem;
+   border: var(--border);
+   padding: 1.5rem;
+   font-size: 1.8rem;
+   color: var(--red);
+   text-align: center;
+   width: 100%;
+   box-shadow: var(--box-shadow);
+}
+
+.btn,
+.delete-btn,
+.option-btn{
+   display: block;
+   width: 100%;
+}
+
+.one-inline-btn,
+.one-inline-delete-btn,
+.one-inline-option-btn{
+   display: inline-block;
+}
+
+.btn,
+.delete-btn,
+.option-btn,
+.one-inline-btn,
+.one-inline-delete-btn,
+.one-inline-option-btn{
+   margin-top: 1rem;
+   text-align: center;
+   padding: 1rem 3rem;
+   font-size: 1.8rem;
+   border-radius: .5rem;
+   border: var(--border);
+   color: var(--white);
+   cursor: pointer;
+   text-transform: capitalize;
+}
+
+.btn,
+.one-inline-btn{
+   background-color: var(--main-color);
+}
+
+.delete-btn,
+.one-inline-delete-btn{
+   background-color: var(--red);
+}
+
+.option-btn,
+.one-inline-option-btn{
+   background-color: var(--orange);
+}
+
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover,
+.one-inline-btn:hover,
+.one-inline-delete-btn:hover,
+.one-inline-option-btn:hover{
+   background-color: var(--black);
+}
+login
+.two-flex-btn{
+   display: flex;
+   align-items: center;
+   column-gap: 1.5rem;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.header{
+   position: sticky;
+   top: 0; left: 0; right: 0;
+   background-color: var(--black);
+   z-index: 1000;
+}
+
+.header .one-flex{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+}
+
+.header .one-flex .logo{
+   font-size: 2.5rem;
+   color: var(--orange);
+}
+
+.header .one-flex .navbar #user-btn,
+.header .one-flex .navbar a{
+   height: 4.2rem;
+   width: 4.5rem;
+   line-height: 4.2rem;
+   font-size: 2rem;
+   color: var(--black);
+   background-color: var(--white);
+   border-radius: .5rem;
+   text-align: center;
+   margin-left: .5rem;
+   cursor: pointer;
+}
+
+.header .one-flex .navbar #user-btn:hover,
+.header .one-flex .navbar a:hover{
+   background-color: var(--main-color);
+   color: var(--white);
+}
+
+.header .one-flex .profile{
+   position: absolute;
+   top: 120%; right: 2rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   padding: 2rem;
+   text-align: center;
+   width: 30rem;
+   border-radius: .5rem;
+   border: var(--border);
+   overflow-x: hidden;
+   transform: scale(0);
+   transform-origin: top right;
+}
+
+.header .one-flex .profile.active{
+   transform: scale(1);
+   transition: .2s linear;
+}
+
+.header .one-flex .profile p{
+   overflow-x: hidden;
+   text-overflow: ellipsis;
+   color: var(--light-color);
+   font-size: 1.8rem;
+   padding-bottom: .5rem;
+}
+
+.header .one-flex .profile .one-image{
+   height: 7rem;
+   width: 7rem;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-bottom: 1.5rem;
+}
+
+.one-account-form form{
+   background: var(--white);
+   box-shadow: var(--box-shadow);
+   box-shadow: var(--box-shadow);
+   padding: 2rem;
+   border: var(--border);
+   border-radius: .5rem;
+   max-width: 100%;
+   margin: 0 auto;
+}
+
+.account-form form h3{
+   padding-bottom: 1rem;
+   font-size: 2.5rem;
+   color: var(--black);
+   text-transform: capitalize;
+   text-align: center;
+}
+
+.account-form form p{
+   padding-top: 1rem;
+   font-size: 1.6rem;
+   color: var(--light-color);
+}
+
+.account-form form p span{
+   color: var(--red);
+}
+
+
+
+.account-form form .one-box{
+   width: 100%;
+   border-radius: .5rem;
+   padding: 1.4rem;
+   font-size: 1.8rem;
+   color: var(--black);
+   background-color: var(--light-bg);
+   margin: 1rem 0;
+}
+
+.account-form form textarea{
+   height: 15rem;
+   width: 100%;
+   resize: none;
+}
+
+.account-form form .one-image{
+   height: 20rem;
+   width: 100%;
+   object-fit: contain;
+   margin-top: .5rem;
+}
+
+.account-form form .link{
+   padding: 1rem 0;
+   text-align: center;
+   font-size: 1.8rem;
+   color: var(--light-color);
+}
+
+.account-form form .link a{
+   color: var(--red);
+}
+
+.account-form form .link a:hover{
+   text-decoration: underline;
+}
+
+.all-posts .one-box-container1{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 35rem);
+   gap: 1.5rem;
+   align-items: flex-start;
+   justify-content: center;
+}
+
+.all-posts .one-box-container1 .one-box{
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+   padding: 2rem;
+   border: var(--border);
+   overflow-x: hidden;
+}
+
+.all-posts .one-box-container1 .one-box .one-image{
+   width: 100%;
+   height: 20rem;
+   border-radius: .5rem;
+   object-fit: cover;
+   margin-bottom: 1.5rem;
+}
+
+.all-posts .one-box-container1 .one-box .one-title{
+   font-size: 2rem;
+   color: var(--black);
+   text-overflow: ellipsis;
+   overflow-x: hidden;
+}
+
+.all-posts .one-box-container1 .one-box .total-reviews{
+   font-size: 1.7rem;
+   padding: 1rem 0;
+
+}
+
+.all-posts .one-box-container1 .one-box .total-reviews i{
+   color: var(--orange);
+}
+
+.all-posts .one-box-container1 .one-box .total-reviews span{
+   color: var(--light-color);
+}
+
+.one-view-post .one-row{
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 2rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border: var(--border);
+   background-color: var(--white);
+   padding: 2rem;
+   border-radius: .5rem;
+}
+
+.one-view-post .one-row .one-col{
+   flex: 1 1 40rem;
+}
+
+.one-view-post .one-row .one-col .one-image{
+   width: 100%;
+   height: 30rem;
+   border-radius: .5rem;
+   object-fit: cover;
+   margin-bottom: 1.5rem;
+}
+
+.one-view-post .one-row .one-col .one-title{
+   font-size: 2rem;
+   color: var(--black);
+}
+
+.one-view-post .one-row .one-col .one-flex{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+.one-view-post .one-row .one-col .one-flex .total-reviews{
+   text-align: center;
+}
+
+.one-view-post .one-row .one-col .one-flex .total-reviews h3{
+   font-size: 7rem;
+   color: var(--black);
+}
+
+.one-view-post .one-row .one-col .one-flex .total-reviews i{
+   font-size: 3rem;
+}
+
+.one-view-post .one-row .one-col .one-flex .total-reviews p{
+   font-size: 1.8rem;
+   color: var(--light-color);
+   padding-top: 1rem;
+}
+
+
+.one-view-post .one-row .one-col .one-flex .total-ratings{
+   font-size: 2rem;
+}
+
+.one-view-post .one-row .one-col .one-flex .total-ratings p{
+   padding: .3rem 0;
+}
+
+.one-view-post .one-row .one-col .one-flex .total-ratings p i{
+   color: var(--orange);
+}
+
+.one-view-post .one-row .one-col .one-flex .total-ratings p span{
+   color: var(--light-color);
+}
+
+.one-reviews-container .one-box-container1{
+   display: grid;
+   row-gap: 3rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border: var(--border);
+   border-radius: .5rem;
+   padding: 2rem;
+}
+
+.one-reviews-container .one-box-container1 .one-box{
+   border-bottom: var(--border);
+   overflow-x: hidden;
+   padding-bottom: 1.5rem;
+   position: relative;
+}
+
+.one-reviews-container .one-box-container1 .one-box .one-user{
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+   margin-bottom: 1rem;
+}
+
+.one-reviews-container .one-box-container1 .one-box .one-user img{
+   height: 6rem;
+   width: 6rem;
+   border-radius: 50%;
+   object-fit: cover;
+}
+
+.one-reviews-container .one-box-container1 .one-box .one-user h3{
+   font-size: 2.5rem;
+   height: 6rem;
+   width: 6rem;
+   border-radius: 50%;
+   background-color: var(--light-bg);
+   text-transform: uppercase;
+   text-align: center;
+   line-height: 6.5rem;   
+}
+
+.one-reviews-container .one-box-container1 .one-box .one-user p{
+   font-size: 1.8rem;
+   color: var(--black);
+   text-overflow: ellipsis;
+   overflow-x: hidden;
+   padding-bottom: .3rem;
+}
+
+.one-reviews-container .one-box-container1 .one-box .one-user span{
+   color: var(--light-color);
+   font-size: 1.5rem;
+}
+
+.one-reviews-container .one-box-container1 .one-box .one-ratings{
+   position: absolute;
+   top: 0; right: 0;
+   z-index: 10;
+}
+
+.one-reviews-container .one-box-container1 .one-box .one-ratings p{
+   border-radius: .5rem;
+   color: var(--white);
+   padding: .5rem 1rem;
+}
+
+.one-reviews-container .one-box-container1 .one-box .one-ratings p span{
+   font-size: 2rem;
+}
+
+.one-reviews-container .one-box-container1 .one-box .one-ratings p i{
+   font-size: 1.5rem;
+}
+
+.one-reviews-container .one-box-container1 .one-box .one-title{
+   font-size: 2rem;
+   color: var(--black);
+   padding: .5rem 0;
+}
+
+.one-reviews-container .one-box-container1 .one-box .one-description{
+   font-size: 1.6rem;
+   white-space: pre-line;
+   color: var(--light-color);
+   line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .one-view-post .one-row .one-col .one-image{
+      height: 20rem;
+   }
+
+}

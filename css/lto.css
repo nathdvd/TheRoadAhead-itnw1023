@@ -1,0 +1,87 @@
+.logo img{
+position: absolute;
+left: 25.5%;
+top: 2%;
+}
+.logo1 img{
+position: absolute;
+right: 3.5%;
+top: 2%;
+}
+
+.logo p{
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	font-size: 25px;
+	color: white;
+	font-weight: 500;
+
+}
+
+.logo h1{
+	position: absolute;
+	top: 19%;
+	left: 45%;
+	font-size: 35px;
+	color: white;
+	font-weight: 800;
+	text-decoration: overline;
+}
+
+.logo h2{
+	position: absolute;
+	top: 24%;
+	left: 50%;
+	font-size: 25px;
+	color: white;
+	font-weight: 500;
+}
+
+.logo1 h1{
+	position: absolute;
+	top: 48%;
+	left: 54%;
+	color: white;
+}
+
+.logo1 a{
+	position: absolute;
+	top: 55%;
+	left: 48%;
+	text-decoration: underline;
+	color: white;
+	font-size: 25px;
+}
+
+.logo1 a:hover{
+	color: Blue;
+}
+
+.arr img{
+	position: absolute;
+	top: 48%;
+	left: 35%;
+	height: 200px;
+}
+.arr2 img{
+	position: absolute;
+	top: 48%;
+	right: 18%;
+	height: 200px;
+}
+
+.log img{
+	position: absolute;
+	top: 70%;
+	left: 48%;
+	height: 220px;
+}
+
+.log p{
+	position: absolute;
+	top: 94%;
+	left: 48%;
+	font-weight: 500;
+	font-size: 15px;
+}

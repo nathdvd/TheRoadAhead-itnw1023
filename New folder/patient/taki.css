@@ -1,0 +1,15 @@
+body{
+	margin: 0;
+    padding: 0;
+    margin-left: 0px;
+    background: url(background.jpg) no-repeat;
+    backface-visibility: visible;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    transition: 0.5s;
+}
+
+.menu-row a{
+	color: white;
+}

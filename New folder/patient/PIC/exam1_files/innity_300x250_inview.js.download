@@ -1,0 +1,241 @@
+/*PARAMETERS*/
+/* GENERATION: 11:43:44-20, February 2018-300x250 */
+/* Template: proxy_lib_standard */
+
+// Old Script Domain
+innity_protocol = (location.protocol == "https:") ? "https:" : "http:";
+innity_domain   = (typeof innity_domain == "undefined") ? innity_protocol + "//media.innity.net/adnetwork/default/" : innity_domain;
+// Cache buster
+var cb_300x250 = new Date().getTime();
+// Environment variable
+env_300x250   = {};
+env_300x250.inIframe  = top != self ? true : false;
+env_300x250.level     = parent.parent;
+try {
+	env_300x250.level.document;
+	env_300x250.iframeBreakable   = true;
+} catch(e) {
+	env_300x250.iframeBreakable   = false;
+	env_300x250.level = self;
+}
+// Main file source
+ad_300x250 = {};
+ad_300x250.id     = "innity_adslot_300x250_" + cb_300x250;
+ad_300x250.adid   = "300x250";
+if (typeof customAd_7_1 != "undefined") {
+	if(typeof customAd_7_1.init == "function") {
+		customAd_7_1.init(ad_300x250.adid);
+		customAd_7_1.onLoad();
+	}
+}
+ad_300x250.width  = 300;
+ad_300x250.height = 300;
+ad_300x250.base   = innity_domain;
+ad_300x250.trueView           = false;
+ad_300x250.viewTracker        = "custom";
+ad_300x250.viewTrackerTime    = 1;
+ad_300x250.viewTrackerPercent = 0;
+ad_300x250.isAdSlotReady      = false;
+ad_300x250.isImpFired         = false;
+ad_300x250.isViewFired        = false;
+ad_300x250.isInitialInview    = false;
+ad_300x250.isInview           = false;
+ad_300x250.showAdTimer        = null;
+// Backup source
+var bkpimage_300x250 = innity_domain + "300x250.gif";
+// Script window level
+var level_300x250 = self;
+/* ClickTAG START */
+var clickTAG_300x250 = "http://www.innity.com";
+/* ClickTAG END */
+/*ENDPARAMETERS*/
+/**
+ * @requires BROWSER
+ */
+function browser_300x250() {
+	this.ua         = " " + navigator.userAgent.toLowerCase();
+	this.av         = parseInt(navigator.appVersion);
+	this.isWin      = (this.ua.indexOf("win") >= 0);
+	this.isWinVista = (this.ua.indexOf("windows nt 6.0") >= 0);
+	this.isMac      = (this.ua.indexOf("mac") >= 0);
+	this.isLinux    = (this.ua.indexOf("linux") >= 0);
+	this.isIE       = (this.ua.indexOf("msie") >= 0) || (Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject);
+	this.isNav4     = ((this.ua.indexOf("mozilla") >= 0) && (this.ua.indexOf("compatible") == -1) && (this.av < 5));
+	this.isFirefox  = (this.ua.indexOf("firefox") >= 0);
+	this.isOpera    = (this.ua.indexOf("opera") > 0);
+	if (this.isOpera) {
+		this.isIE = false;
+	}
+	this.isSafari    = (this.ua.indexOf("applewebkit") > 0);
+	this.isChrome    = (this.ua.indexOf("chrome") > 0);
+	this.isKonqueror = (this.ua.indexOf("konqueror") > 0);
+	this.isGecko     = (this.ua.indexOf("gecko/") > 0);
+	this.isCamino    = (this.ua.indexOf("camino/") > 0);
+	this.IEVersion   = (this.ua.indexOf("msie") + 1 ? parseFloat(this.ua.split("msie")[1]) : 999);
+	this.isIE5up     = (!this.isIE) ? true : ((this.IEVersion > 5) ? true : false);
+	this.isIE6up     = (!this.isIE) ? true : ((this.IEVersion > 6) ? true : false);
+	this.isIE9up     = (!this.isIE) ? true : ((this.IEVersion > 9) ? true : false);
+	// iOS
+	this.isIOS = (/(iphone|ipod|ipad)/i.test(this.ua));
+	try {
+		this.IOSVersion = (this.ua).match(/OS (\d+)_(\d+)_?(\d+)?/i);
+		this.IOSVersion = (this.isIOS && this.IOSVersion) ? parseFloat(parseInt(this.IOSVersion[1], 10) + "." + parseInt(this.IOSVersion[2], 10) + "." + parseInt(this.IOSVersion[3] || 0, 10)) : 999;
+	} catch(e) {
+		this.IOSVersion = 1;
+	}
+	// Android
+	this.isAndroid = (/(android)/i.test(this.ua));
+	try {
+		this.AndroidVersion = (this.isAndroid) ? parseFloat(this.ua.slice(this.ua.indexOf("android") + 8)) : 999;
+	} catch(e) {
+		this.AndroidVersion = 999;
+	}
+	// Facebook Webview
+	this.isMobileWebView = (/(fb4a|fbios)/i.test(this.ua));
+	// Canvas Tag Support
+	try {
+		this.supportCanvas = ((!!document.createElement("canvas").getContext) ? true : false);
+	} catch(e) {
+		this.supportCanvas = false;
+	}
+	// Video Tag Support
+	try {
+		this.supportVideo = ((!!document.createElement("video").canPlayType) ? true : false);
+	} catch(e) {
+		this.supportVideo = false;
+	}
+	// HTML5 support
+	this.supportHTML5 = (this.supportCanvas && this.supportVideo && (!(this.isIE && this.IEVersion < 9))) ? true : false;
+}
+var mybrowser_300x250 = new browser_300x250();
+/** END */
+// Write HTML5 Ad Rules
+var writeHTML5_300x250 = mybrowser_300x250.supportHTML5;
+/** END */
+function c300x250_buildAd() {
+	// Get innity_adslot
+	ad_300x250.innity_adslot = self.document.getElementById("innity_adslot_300x250");
+	// Write innity_adslot if not exist
+	if (!ad_300x250.innity_adslot) {
+		ad_300x250.innity_adslot      = document.createElement("div");
+		ad_300x250.innity_adslot.id   = ad_300x250.id;
+		// If in iframe
+		if (env_300x250.inIframe) {
+			document.body.style.margin  = "0";
+			document.body.style.padding = "0";
+		}
+		try {
+			ad_300x250.currentScript = c300x250_getCurrentScript();
+			ad_300x250.currentScript.parentNode.insertBefore(ad_300x250.innity_adslot, ad_300x250.currentScript.nextSibling);
+			ad_300x250.innity_adslot = c300x250_getObj(ad_300x250.id)
+			// Adslot is ready
+			ad_300x250.isAdSlotReady  = true;
+		} catch (e) {}
+	} else {
+		ad_300x250.innity_adslot.id   = ad_300x250.id;
+		// Adslot is ready
+		ad_300x250.isAdSlotReady  = true;
+	}
+	if (!ad_300x250.isAdSlotReady) {
+		return;
+	}
+	ad_300x250.innity_adslot.style.display  = "block";
+	ad_300x250.innity_adslot.style.margin   = "0 auto";
+	ad_300x250.innity_adslot.style.width    = ad_300x250.width + "px";
+	ad_300x250.innity_adslot.style.height   = ad_300x250.height + "px";
+	ad_300x250.innity_adslot.style.overflow = "hidden";
+	if (writeHTML5_300x250) {
+		// Setup Teaser layer
+		ad_300x250.src = ad_300x250.base + "assets_300x250/index.html";
+		// Setup Teaser Ad iframe
+		ad_300x250.iframe              = document.createElement("iframe");
+		ad_300x250.iframe.id           = "innity_iframe_300x250_" + cb_300x250;
+		ad_300x250.iframe.style.background = "transparent";
+		ad_300x250.iframe.style.border = 0;
+		ad_300x250.iframe.style.width  = ad_300x250.width + "px";
+		ad_300x250.iframe.style.height = ad_300x250.height + "px";
+		ad_300x250.iframe.scrolling    = "no";
+		ad_300x250.iframe.src          = ad_300x250.src;
+		// Append DOM into innity adslot
+		ad_300x250.innity_adslot.appendChild(ad_300x250.iframe);
+	} else {
+		// Image tag
+		var imageTag_300x250 = "";
+		if (bkpimage_300x250 != "") {
+			imageTag_300x250 += '<a href="' + clickTAG_300x250 + '" target="_blank"><img src="' + bkpimage_300x250 + '" border="0" alt="Click Here" title="Click Here"></a>';
+		}
+		ad_300x250.innity_adslot.innerHTML = imageTag_300x250;
+	}
+}
+/**
+ * @requires COMMON FUNCTIONS
+ */
+// Object catcher
+function c300x250_getObj(obj) {
+	return level_300x250.document.getElementById(obj);
+}
+// Get URL Parameters
+function c300x250_getURLParam(param) {
+	var strHref = self.location.href;
+	if (strHref.indexOf("?") > -1) {
+		return decodeURIComponent((new RegExp("[?|&]" + param + "=" + "([^&;]+?)(&|#|;|$)").exec(strHref) || [, ""])[1].replace(/\+/g, "%20")) || "";
+	}
+	return "";
+}
+// Get Iframe
+function c300x250_getIframe() {
+	try {
+		currentWindow	= self;
+		do {
+			if (currentWindow.parent.document) {
+				if (currentWindow.parent.document.getElementsByTagName("frame").length == 0) {
+					var iframes = currentWindow.parent.document.getElementsByTagName("iframe");
+					for (var i=0, ilen=iframes.length; i<ilen; i++) {
+						try {
+							if (iframes[i].contentWindow == currentWindow || iframes[i].contentDocument == currentWindow.document) {
+								this.iframeId = i;
+								break;
+							}
+						} catch(e) {}
+					}
+				}
+			}
+			currentWindow = currentWindow.parent;
+		} while (top != currentWindow);
+		var iframe_300x250 = level_300x250.document.getElementsByTagName("iframe")[this.iframeId];
+		var iframeParent         = iframe_300x250.parentNode;
+		// Set the styling
+		iframe_300x250.width            = 0;
+		iframe_300x250.height           = 0;
+		iframe_300x250.tabIndex         = -1;
+		iframe_300x250.style.width      = "0px";
+		iframe_300x250.style.height     = "0px";
+		iframe_300x250.style.visibility = "hidden";
+		return iframe_300x250;
+	} catch(e) {
+		self.document.body.style.overflow = "hidden";
+		return false;
+	}
+}
+// Get Proxy script tag
+function c300x250_getCurrentScript() {
+	try {
+		if (typeof document.currentScript != "undefined" && document.currentScript != null) {
+			return document.currentScript;
+		}
+		if (c300x250_getObj('innity_proxy_300x250')) {
+			return c300x250_getObj('innity_proxy_300x250');
+		}
+		var scripts = document.scripts;
+		for (var i = 0; i < scripts.length; ++i) {
+			if(scripts[i].src.indexOf("proxy_300x250.js") > 0) {
+				return scripts[i];
+			}
+		}
+	} catch(e) {
+		return null;
+	}
+}
+/** END */
+// Build Ad, Tracking & Event handling
+c300x250_buildAd();

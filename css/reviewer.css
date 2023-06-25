@@ -1,0 +1,67 @@
+.container2{
+	position: absolute;
+	top: 18%;
+	left: 30%;
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.logo-dr img{
+height: 170px;
+width: 500px;
+	position: absolute;
+	top: 0%;
+	left: 49%;
+	background: cover;
+}
+.text-cont h1{
+	position: absolute;
+	top: 2%;
+	left: 45%;
+	color: whitesmoke;
+}
+
+.text-cont h2{
+	position: absolute;
+	top: 6%;
+	left: 50%;
+	color: whitesmoke;
+	text-decoration: overline;
+}
+
+.swiper{
+	width: 80%;
+	height: fit-content;
+}
+.swiper-slide img{
+	width: 100%;
+
+}
+
+.img-back img{
+	height: 230px;
+	position: absolute;
+	top: 2%;
+	left: 23%;
+}
+
+.img-back2 img{
+	height: 230px;
+	position: absolute;
+	top: 2%;
+	right: 2%;
+}
+
+
+
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+	color: black;
+    }
+.swiper .swiper-pagination-bullet-active{
+	background: black;
+}
+

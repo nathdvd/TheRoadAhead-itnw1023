@@ -1,0 +1,156 @@
+var t1;
+
+if(window.attachEvent){
+	window.attachEvent('onload', bannerInit);
+} else {
+	window.addEventListener('load', bannerInit, false);
+}
+
+$('#btn_replay').addEventListener('click', replayHandle, false);
+$('#page_wrapper').addEventListener('click', function(e){
+	e.stopPropagation();
+	InnityHTMLAd.click({clickTAG:'clickTAG'});
+}, false);
+
+function bannerInit() 
+{
+	t1 = new TimelineMax({onComplete:function(){console.log("myTotalTime:" + t1.totalDuration())}});
+	t1.to("#bg1", 0.1,{opacity:1},"+=0.1");
+	t1.to("#buy", 0.1, {scale:0.5,opacity:0},"+=0.05")
+ 	.to("#buy", 0.1, {scale:1, opacity:1});
+	t1.from("#line1", 0.1,{opacity:0, scale:0},"+=0.08");
+	t1.to("#limit", 0.1, {scale:0.5,opacity:0},"+=0.08")
+ 	.to("#limit", 0.1, {scale:1, opacity:1});
+	t1.from("#ur1", 0.2,{opacity:0, scale:0},"+=0.1");
+	t1.from("#crtv", 0.3,{opacity:0, scale:0, ease:Bounce.easeOut},"+=0.1");
+	
+	t1.to("#buy", 0.1,{opacity:0},"+=0.4");
+	t1.to("#line1", 0.1,{opacity:0},"-=0.1");
+	t1.to("#limit", 0.1, {scale:0.5,opacity:0},"-=0.1")
+	t1.to("#ur1", 0.1,{opacity:0},"-=0.1");
+	t1.from("#crtv", 0.1,{opacity:0, scale:0},"-=0.1");
+	
+	t1.to("#impact", 0.1,{opacity:1, ease:Expo.easeOut},"+=0.1");
+	t1.from("#splsh0", 0.05,{opacity:0, scale:0, ease:Bounce.easeOut},"+=0.4");
+	t1.from("#splsh1", 0.05,{opacity:0, scale:0, ease:Bounce.easeOut});
+	t1.from("#splsh2", 0.05,{opacity:0, scale:0, ease:Bounce.easeOut});
+	t1.from("#splsh3", 0.05,{opacity:0, scale:0, ease:Bounce.easeOut});
+	t1.from("#splsh4", 0.05,{opacity:0, scale:0, ease:Bounce.easeOut});
+	t1.from("#splsh5", 0.05,{opacity:0, scale:0, ease:Bounce.easeOut});
+	t1.from("#splsh6", 0.05,{opacity:0, scale:0, ease:Bounce.easeOut});
+	
+	t1.to("#impact", 0.1, {opacity:0},"+=0.3");
+	t1.to("#splsh0", 0.07, {opacity:0},"-=0.1");
+	t1.to("#splsh1", 0.07, {opacity:0},"-=0.1");
+	t1.to("#splsh2", 0.07, {opacity:0},"-=0.1");
+	t1.to("#splsh3", 0.07, {opacity:0},"-=0.1");
+	t1.to("#splsh4", 0.07, {opacity:0},"-=0.1");
+	t1.to("#splsh5", 0.07, {opacity:0},"-=0.1");
+	t1.to("#splsh6", 0.07, {opacity:0},"-=0.1");
+	t1.to("#bg1", 0.1,{opacity:0});
+	
+	t1.to("#fl_eng", 0.1,{alpha:0, ease: Back.easeInOut},"-=0.5")
+	.to("#fl_eng", 0.1,{alpha:1, opacity:1, ease: Back.easeInOut});
+	t1.to("#bg2", 0.12,{opacity:1,ease: Back.easeInOut},"+=0.02");
+	
+	t1.to("#bg2", 0.1,{opacity:0},"+=0.3");
+	t1.to("#fl_eng", 0.1,{opacity:0},"+=0.5");
+	
+	t1.to("#bg3", 0.3,{opacity:1},"+=0.2");
+	t1.to("#aim", 0.3, {opacity:1,x:70, y:70, ease: Power0.easeNone});
+	t1.to("#apple", 0.1, {opacity:1,x:-75, y:-75, ease: Power0.easeNone},"-=0.1");
+	t1.to("#aim", 0.3, {opacity:1});
+	t1.to("#apple", 0.08, {opacity:1, scale:0, ease: Power0.easeNone},"-=0.3");
+	t1.to("#apple_broke", 0.02, {opacity:0, scaleX:0, scaleY:0},"-=0.2")
+	.to("#apple_broke", 0.06, {opacity:1, scaleX:1, scaleY:1},"-=0.08");
+	t1.to("#apple_broke", 0.03, {opacity:0},"-=1.2")
+	.to("#apple_broke", 0.03,{opacity:0});
+	t1.to("#aim", 0.08, {opacity:1,x:70, y:70, ease: Power0.easeNone, scaleX:1, scaleY:1},"+=0.3");
+	t1.to("#aim", 0.1, {ease: Power0.easeNone, y:-23,x:+105, scaleX:0.5, scaleY:0.5},"+=0.1");
+	t1.to("#target", 0.2,{opacity:1,y:-20},"-=0.1");
+	t1.to("#fpd", 0.1,{opacity:1,y:-20},"-=0.1");
+	
+	t1.to("#apple", 0.1, {opacity:0},"+=0.5");
+	t1.to("#aim", 0.1, {opacity:0});
+	t1.to("#target", 0.1,{opacity:0});
+	t1.to("#fpd", 0.1,{opacity:0});
+	
+	t1.to("#bg6", 0.3,{opacity:1});
+	t1.to("#assured", 0.1,{opacity:1},"+=0.05");
+	t1.from("#icon1", 0.2,{opacity:0, scale:0, ease:Bounce.easeOut},"+=0.1");
+	t1.to("#q_lity", 0.1,{opacity:1},"+=0.1");
+	t1.to("#pls1", 0.1,{opacity:1,y:-20},"+=0.1");
+	t1.from("#icon2", 0.2,{opacity:0, scale:0, ease:Bounce.easeOut},"+=0.1");
+	t1.to("#visib", 0.1,{opacity:1},"+=0.1");
+	t1.to("#pls2", 0.1,{opacity:1,y:-20},"+=0.1");
+	t1.from("#icon3", 0.2,{opacity:0, scale:0, ease:Bounce.easeOut},"+=0.1");
+	t1.to("#brsafe", 0.2,{opacity:1},"+=0.1");
+	t1.from("#q_line", 0.2,{opacity:0, scale:0},"+=0.1");
+	t1.to("#inventory", 0.1,{opacity:1},"+=0.04");
+	
+	t1.to("#assured", 0.1,{opacity:0},"+=0.5");
+	t1.from("#icon1", 0.1,{opacity:0},"-=0.1");
+	t1.to("#pls1", 0.1,{opacity:0},"-=0.1");
+	t1.from("#icon2", 0.1,{opacity:0},"-=0.1");
+	t1.to("#pls2", 0.1,{opacity:0},"-=0.1");
+	t1.from("#icon3", 0.1,{opacity:0},"-=0.1");
+	t1.from("#q_line", 0.1,{opacity:0},"-=0.1");
+	t1.to("#inventory", 0.1,{opacity:0},"-=0.1");
+	
+	t1.to("#bg7", 0.3,{opacity:1},"+=0.1");
+	t1.to("#sea", 0.3,{opacity:1},"-=0.1");
+	t1.to("#u_prl", 0.3,{opacity:1},"+=0.3");
+	t1.to("#region", 0.3,{opacity:1},"+=0.1");
+	t1.to("#countries", 0.3, {scale:0.5, ease:Back.easeOut.config(0.8, 0.8),opacity:0},"+=0.2")
+ 	.to("#countries", 0.3, {scale:1, ease:Back.easeOut.config(0.8, 0.8), opacity:1});
+	
+	t1.to("#sea", 0.1,{opacity:0},"+=0.8");
+	t1.to("#u_prl", 0.1,{opacity:0},"-=0.1");
+	t1.to("#region", 0.1,{opacity:0},"-=0.1");
+	t1.to("#countries", 0.08, {opacity:0},"-=0.08")
+ 	.to("#countries", 0.08, {opacity:0},"-=0.08");
+	
+	t1.to("#bg8", 0.1,{opacity:1},"+=0.07");
+	t1.to("#last_splsh", 0.1, {opacity:1,ease: Circ.easeOut, y:-20},"+=0.1");
+	t1.from("#last_copy", 0.3,{opacity:0, scale:0, ease:Bounce.easeOut},"+=0.1");
+	t1.to("#last_copy", 0.3,{opacity:1, scale:0.9, rotation:9.8, ease:Bounce.easeOut,x:8,y:-8},"+=0.2");
+	t1.to("#bg_last", 0.3,{opacity:1},"-=0.1");
+	
+	
+	t1.to("#last_splsh", 0.1, {opacity:0},"-=0.1");
+	
+	t1.to("#bg_last", 0.2,{opacity:1},"+=0.1");
+	t1.to("#logo", 0.05,{opacity:1, scale:0.7},"-=0.05");
+	t1.from("#cta", 0.05,{opacity:0, scale:1, ease:Bounce.easeOut},"+=0.02")
+	t1.to("#cta", 0.05,{opacity:1, scale:1, ease:Bounce.easeOut},"-=0.01");
+	
+	/*from("#cta", 0.05,{opacity:0, scale:1, ease:Bounce.easeOut}*/
+	t1.to("#btn_replay", 0.1,{opacity:1},"+=0.1");
+	
+};
+
+function replayHandle(e){
+	e.stopPropagation();
+	t1.restart();
+}
+
+function $(el){
+	var _type = el.slice(0,1);
+	var _name = el.slice(1, el.length);
+	var _this;
+
+	switch(_type){
+		case '#':
+			_this = document.getElementById(_name);	
+		break;
+
+		case '.':
+			_this = document.getElementsByClassName(_name);
+		break;
+
+		default:
+			_this = document.getElementsByTagName(el);
+		break;
+	}
+	return _this;
+}

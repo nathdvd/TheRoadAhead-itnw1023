@@ -1,0 +1,33 @@
+//------------------------------------------DEVELOPER SIDE--------------------------------------------//
+	
+var timerTrackingID = null;
+function triggerClickTag(clickTag) {
+	InnityHTMLAd.click({clickTAG: clickTag});
+};
+
+function triggerTrack(track) {
+	InnityHTMLAd.track(track);
+	InnityHTMLAd.trace(track);
+}
+
+function triggerTimerStart(id) {
+	if(timerTrackingID === id) {
+		return;
+	}
+	triggerTimerStop();
+	InnityHTMLAd.startTimer(id);
+	timerTrackingID = id;
+	InnityHTMLAd.trace(id);
+};
+
+function triggerTimerStop() {
+	if(timerTrackingID !== null) {
+		InnityHTMLAd.stopTimer(timerTrackingID);
+		InnityHTMLAd.trace(timerTrackingID);
+	}
+};
+
+function trackingReset() {
+	triggerTimerStop();
+	timerTrackingID = null;
+};
